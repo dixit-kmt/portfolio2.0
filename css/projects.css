@@ -1,0 +1,126 @@
+:root {
+
+  --white: #ffffff;
+
+  --opacity: 60%;
+}
+body{
+  background-color: #26243b;
+}
+
+
+h3.project-tittle {
+  font-size: 30px;
+  color: #0ed2f7;
+  opacity: var(--opacity);
+  margin: 27rem 0 0 0;
+}
+
+h4.best-work {
+  color: var(--white);
+  font-size: 65px;
+  font-family: var(--font);
+  font-weight: 600;
+  text-align: center;
+  margin: 0.5rem 0 3rem 0;
+}
+
+div.card-project {
+  background: linear-gradient(45deg, #12c2e9, #c471ed);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.123);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.7rem 1.5rem;
+  padding: 2rem 3rem 2rem 3rem;
+}
+
+img.project-one {
+  width: 85%;
+  border-radius: 30px;
+  margin: 0 1rem 1rem 7rem;
+  transition: 0.4s ease all;
+}
+
+img.project-one:hover {
+  transform: perspective(800px) rotateY(-8deg) translateY(-20px) rotateX(10deg)
+    scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+
+img.project-two {
+  width: 85%;
+  border-radius: 30px;
+  margin: 0 7rem 1rem 1rem;
+  transition: 0.4s ease all;
+}
+
+img.project-two:hover {
+  transform: perspective(800px) rotateY(-8deg) translateY(-20px) rotateX(10deg)
+    scale(1);
+  filter: blur(0);
+  opacity: 1;
+}
+
+img.project-one-mobile, img.project-two-mobile {
+  width: 85%;
+  border-radius: 30px;
+  margin: 1rem 1rem 1rem 1rem;
+  transition: 0.4s ease all;
+}
+
+div.moving-up-projects {
+  margin-top: -32rem !important;
+}
+
+div.moving-project-one {
+  margin: 6rem 0 0 0;
+}
+
+div.projects-margin {
+  margin: -0.08rem 0 0 40.7rem;
+}
+
+p.curious-message {
+  color: var(--white);
+  font-size: 25px;
+  opacity: var(--opacity);
+  font-weight: 600;
+  margin: 3rem 0 0 0 !important;
+}
+
+div.visit-position {
+  background-color: #f3ec78;
+  background: linear-gradient(
+    90deg,
+    #20bdff,
+    #a5fecb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: fit-content;
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 2rem 0 !important;
+}
+
+p.visit-message {
+  background-color: #f3ec78;
+  background: linear-gradient(
+    90deg,
+    #20bdff,
+    #a5fecb
+  ); /* Chrome 10-25, Safari 5.1-6 */
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: fit-content;
+  font-weight: 600;
+}

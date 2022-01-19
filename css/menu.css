@@ -1,0 +1,266 @@
+.menu-button{
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.menu-icon-burger{
+  position: relative;
+  right: 15px;
+}
+
+a:hover{
+  color: #fff;
+}
+[class^="icon--"] {
+    font-family: 'FontAwesome'; /* Apply icon font */
+    font-style: normal; /* Removes the default italics */
+}
+
+[class^="social-button"] {
+   	display: inline-flex; /* Display elements inline but turn them into a flex-container */
+	align-items: center; /* Centrally align the children vertically */
+	justify-content: center; /* Centrally align the children horizontally */
+
+   	height: 3rem; /* Create square */
+    width: 3rem; /* Create square */
+
+   	font-size: 1.4rem; /* Increase the default font size */
+    color: white; /* Make icon white */
+    border-radius: 50%; /* Create circle */
+
+    text-decoration: none; /* Remove default underline */
+
+    transition: background-color 150ms ease-in-out; /* Transition background colour on hover */
+
+    margin-right: 0.1rem;
+}
+
+.icon--twitter::before {
+    content: '\f099'; /* Unicode value for the twitter icon in our chosen icon font */
+}
+
+.icon--facebook::before {
+    content: '\f09a'; /* Unicode value for the facebook icon in our chosen icon font */
+}
+
+.icon--pintrest::before {
+    content: '\f231'; /* Unicode value for the pintrest icon in our chosen icon font */
+}
+
+.social-button--twitter {
+    background-color: #32b9e7; /* Twitter colour */
+}
+
+.social-button--twitter:hover {
+    background-color: #2a9dc4; /* Twitter hover colour */
+}
+
+.social-button--github {
+    background-color: grey; /* Facebook colour */
+}
+
+.social-button--github:hover {
+    background-color: black; /* Facebook hover colour */
+}
+
+.social-button--pintrest {
+    background-color: #d63533; /* Pintrest colour */
+}
+
+.social-button--pintrest:hover {
+    background-color: #b52d2b; /* Pintrest hover colour */
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+	Start New Code For Menu
+
+*/
+
+/* Menu Button */
+
+.menu-button {
+	display: flex; /* Display flex to center the menu icon in the button */
+	justify-content: center; /* Align horizontally */
+	align-items: center; /* Align vertically */
+
+	width: 4rem; /* Button width */
+	height: 4rem; /* Button height */
+	border-radius: 50%; /* Make the button a circle */
+	background-color: rgba(255,255,255,0.4); /* Make the background white and semi-transparent */
+	cursor: pointer;
+
+	transition: background-color 500ms ease-in-out; /* Add transition for the background-color */
+}
+
+/* .menu-button {
+	margin: 1.5rem;
+} */
+
+.menu-button:hover,
+.menu-button:focus,
+.menu-button:active {
+    background-color: rgba(0,0,0,0.8); /* On hover, transition the background-color and transparency */
+}
+
+.menu-icon {
+	position: relative; /* Give the menu-icon position relative so we can absolutely position children */
+    width: 2rem; /* Icon width */
+	height: 1.5rem; /* Icon height */
+}
+
+.menu-icon span {
+    position: absolute; /* Absolutely position all children of the menu-icon */
+    height: 0.125rem; /* Height of each line in our menu button */
+    width: 100%; /* With of each line */
+    background-color: #332F21; /* Background colour of each line */
+    transition: background-color 500ms ease-in-out; /* Transition added for the background colour */
+}
+
+.menu-icon span:nth-child(1) {
+    top: 0.0625rem; /* Position the first line roughly 1px from the top */
+}
+
+.menu-icon span:nth-child(2) {
+    top: 0.625rem; /* Position the second line roughly 10px from the top, one on top of the other */
+}
+
+.menu-icon span:nth-child(3) {
+    top: 1.25rem; /* Position the fourth line roughly 20px from the top */
+}
+
+.menu-button:hover span,
+.menu-button:focus span,
+.menu-button:active span {
+    background: white; /* On hover, make the background-color of the menu icon white */
+}
+
+/* Turn the Menu icon into a close icon  */
+
+.menu-icon.is-active span:nth-child(1) {
+    opacity: 0; /* Hide the first line */
+}
+
+.menu-icon.is-active span:nth-child(2) {
+    transform: rotate(45deg); /* Rotate the second line 45 degrees */
+}
+
+.menu-icon.is-active span:nth-child(3) {
+	top: 0.625rem; /* Position the third line over the second line */
+    transform: rotate(-45deg); /* Rotate the third line -45 degrees */
+}
+
+/* Fullscreen Menu */
+
+.fullscreen-menu-container {
+	position: fixed; /* Fix the menu to the viewport */
+	top: 12.5rem; /* Add the top value to allow the element to animate up over */
+	left: 0; /* Position to the left of the viewport */
+	z-index: 5; /* Add z-index to make sure the element is always above everything else */
+	width: 100vw; /* Cover the whole width of the viewport */
+	height: 100vh; /* Cover the whole height of the viewport */
+	overflow: scroll; /* Allow scrolling when the content is larger than the viewport */
+
+	background-color: rgba(255,255,255,0.95); /* Semi-transparent white background for the menu-overlay */
+
+	opacity: 0; /* Apply 0 transparency to hide the overlay on load */
+	pointer-events: none; /* Stop the elements in the menu-container from being clicked */
+
+	transition: top 500ms ease-in, opacity 300ms ease-in; /* Transition the top and opacity */
+}
+
+.fullscreen-menu-container.is-open {
+	opacity: 1; /* Transition opacity from 0 to 1 */
+	top: 0; /* Transition to the top of the viewport */
+	pointer-events: auto; /* Re-add pointer events to elements can be clicked again */
+}
+
+.fullscreen-menu-container .menu-button {
+	position: absolute; /* Position the button absolutely to the image-cotainer */
+	top: 0.7rem; /* Position button from the top */
+	right: 0.9rem; /* Position button from the left */
+}
+
+.fullscreen-menu {
+	text-align: center; /* Apply text-align center to all children */
+	max-width: 62rem; /* Maximum width of the content */
+	padding: 6rem 2rem 4rem; /* Add padding to the content, large at the top to allow for the close button */
+	width: 100%; /* Where it can, stretch to the max-width otherwise, the full viewport */
+}
+
+	.fullscreen-menu__image {
+		width: 5rem; /* Make square */
+		height: 5rem; /* Make square */
+		border-radius: 50%; /* Turn the square into a circle */
+		margin: 0 auto 1.5rem;
+	}
+
+	.fullscreen-menu__title {
+		max-width: 30rem; /* Apply a different max-width to the title to achieve a more optimal reading lenght */
+		margin: 0 auto; /* Position in the horizontal center and remove top and bottom margins */
+	}
+
+	.fullscreen-menu__nav {
+		margin: 3rem 0; /* Apply top and bottom margin of the navigation */
+	}
+
+	.fullscreen-menu__nav ul {
+		list-style: none; /* Remove the dots from list items */
+		margin: 0; /* Remove defualt margin */
+		padding: 0; /* Remove default padding */
+	}
+
+	.fullscreen-menu__nav a {
+		display: block; /* Span the whole width */
+		font-size: 1.4rem; /* Increase the default font size */
+		padding: 1rem; /* Add padding to the button to increase the click/tap area */
+		color: #A2A2A2; /* Apply light grey colour */
+		text-decoration: none; /* Remove default underline */
+		transition: color 300ms ease-in; /* Add transition for the colour on hover */
+	}
+
+	.fullscreen-menu__nav a:hover,
+	.fullscreen-menu__nav a:focus,
+	.fullscreen-menu__nav a:active {
+		color: #332F21; /* Darken the text colour on hover */
+	}
+
+.fullscreen-menu [class^="social-button"] {
+	margin: 0 0.5rem; /* Add a larger margin between the social buttons in the menu overlay */
+	height: 3.75rem; /* Increase the size of the social buttons */
+    width: 3.75rem; /* Increase the size of the social buttons */
+    font-size: 1.5rem; /* Increase the size of the social icon inside the button */
+}
+
+@media only screen and (min-width: 46rem) { /* When the viewport is large enough */
+
+	.fullscreen-menu-container {
+		display: flex; /* Add display flex to the container */
+		justify-content: center; /* Align menu contents to the center horizontally */
+		align-items: center; /* Align menu contents to the center vertically */
+	}
+
+	.fullscreen-menu {
+		padding: 0;
+	}
+
+	.fullscreen-menu__nav {
+		margin: 4rem 0; /* Increase the margin between the navigation and other elements in the menu */
+	}
+
+		.fullscreen-menu__nav ul {
+			display: flex; /* Turn the unordered list into a flex-container */
+			justify-content: space-between; /* Share the available space between the list items */
+		}
+
+}

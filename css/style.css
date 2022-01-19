@@ -1,0 +1,175 @@
+#fp-nav ul li .fp-tooltip{
+  color: #000;
+}
+
+
+.section{
+  padding: 5%;
+}
+
+.col-lg-6{
+  margin: auto;
+}
+
+
+body {
+
+	 background: #fff;
+	 color: #000;
+	 margin: 0;
+}
+
+nav{
+  font-size: 1.2rem;
+  padding: 0 0 0 5%;
+}
+
+a{
+  text-decoration: none;
+}
+
+.navbar{
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+
+
+
+.navbar-brand{
+  font-family: 'Zen Tokyo Zoo', cursive;
+  font-size: 3rem;
+
+}
+
+.nav-link{
+  font-size: 1.2rem;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+
+
+.home{
+  margin-top: 30px;
+  text-align: center;
+}
+.homeText{
+   font: 400 1rem/1.5 "Neuton";
+	 text-transform: uppercase;
+	 letter-spacing: 0.5em;
+
+}
+ p .myName{
+	 font: 700 4em "Oswald", sans-serif;
+	 letter-spacing: 0;
+	 padding: 0.25em 0 0.325em;
+	 display: block;
+	 margin: 0 auto;
+	 text-shadow: 0 0 80px rgba(255, 255, 255, .5);
+	/* Clip Background Image */
+	 background: url(https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/wp-cms/uploads/2016/12/3066586-poster-p-1-the-year-dark-patterns-won.jpg) repeat-y;
+	 -webkit-background-clip: text;
+	 background-clip: text;
+	/* Animate Background Image */
+	 -webkit-text-fill-color: transparent;
+	 -webkit-animation: aitf 80s linear infinite;
+	/* Activate hardware acceleration for smoother animations */
+	 -webkit-transform: translate3d(0, 0, 0);
+	 -webkit-backface-visibility: hidden;
+}
+/* Animate Background Image */
+ @-webkit-keyframes aitf {
+	 0% {
+		 background-position: 0% 50%;
+	}
+	 100% {
+		 background-position: 100% 50%;
+	}
+}
+
+
+.big-heading-container{
+  text-align: center;
+
+}
+
+.big-heading{
+  color: #fff;
+  font-size: 8rem;
+  margin-bottom: 100px;
+}
+
+
+.arrow-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.arrow {
+  box-sizing: border-box;
+  height: 5vw;
+  width: 5vw;
+  border-style: solid;
+  border-color: white;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+
+}
+
+.arrow:hover {
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+
+
+.front-end-img{
+  padding: 50px 0 0 30px;
+}
+
+.section-heading{
+  font-size: 3rem;
+  padding-bottom: 20px;
+  color: #035397;
+
+
+}
+
+.section-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+  .homeText{
+    font-size: 0.8rem;
+  }
+
+
+  .section-heading{
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .big-heading{
+    font-size: 6rem
+  }
+
+}
