@@ -2,7 +2,8 @@
   color: #000;
 }
 
-.fp-watermark{ //to remove fullpage.js watermark
+/* to remove fullpage.js watermark */
+.fp-watermark{
   display: none;
 }
 
