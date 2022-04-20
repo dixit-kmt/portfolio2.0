@@ -2,6 +2,10 @@
   color: #000;
 }
 
+.fp-watermark{ //to remove fullpage.js watermark
+  display: none;
+}
+
 
 .section{
   padding: 5%;
